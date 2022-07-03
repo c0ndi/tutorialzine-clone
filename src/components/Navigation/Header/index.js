@@ -73,7 +73,7 @@ function Header() {
 		let prevDirection = 0;
 
 		function toggleHeader() {
-			if (direction === 2 && curScroll > 80) {
+			if (direction === 2 && curScroll > 400) {
 				header.current.style.transform = "translateY(-100%)";
 				prevDirection = direction;
 			} else if (direction === 1) {

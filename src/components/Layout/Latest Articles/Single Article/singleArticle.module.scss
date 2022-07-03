@@ -1,0 +1,38 @@
+@import "src/colors";
+
+.content {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #eaeaea;
+	border-radius: 3px;
+}
+
+.bottomBox {
+	padding: 2em;
+
+	h3 {
+		word-break: break-word;
+		color: $darkGray;
+		font-size: 20px;
+		font-weight: 500;
+		margin-bottom: 1em;
+	}
+}
+
+.bottomBoxTags {
+	.singleTag {
+		color: $secondaryGreen;
+		font-size: 14px;
+		border-right: 1px solid #bababa;
+		font-weight: 700;
+		padding-inline: 0.6em;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			border-right: 0px solid #bababa;
+		}
+	}
+}

@@ -1,0 +1,77 @@
+@import "src/colors";
+
+.wrapper {
+	padding: 70px 0 120px;
+}
+
+.content {
+	margin-inline: auto;
+	padding-inline: 15px;
+	max-width: 1200px;
+
+	h2 {
+		font-size: 30px;
+		font-weight: 500;
+		text-align: center;
+		color: $darkBlue;
+		position: relative;
+		padding-bottom: 10px;
+		margin: 0 0 60px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 70px;
+			height: 2px;
+			background: $secondaryGreen;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+.btnBox {
+	width: 100%;
+	display: grid;
+	place-items: center;
+	padding-top: 60px;
+
+	button {
+		font-size: 0.9em;
+		color: $secondaryGreen;
+		background-color: transparent;
+		padding: 12px 15px;
+		font-size: 13px;
+		border: none;
+		border: 1px solid transparent;
+		border-color: $secondaryGreen;
+		border-radius: 3px;
+		cursor: pointer;
+		font-weight: 700;
+		line-height: 1.4;
+
+		&:hover {
+			background-color: $secondaryGreen;
+			color: #fff;
+		}
+	}
+}
+
+.articlesBox {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 2em;
+}
+
+@media (max-width: 992px) {
+	.articlesBox {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 768px) {
+	.articlesBox {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+}
